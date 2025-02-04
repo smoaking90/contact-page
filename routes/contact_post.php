@@ -16,4 +16,6 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
     badRequest('The provided email address is invalid.');
 }
 
+connectDb();
+
 var_dump($name, $email, $message);die;
