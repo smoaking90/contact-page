@@ -18,6 +18,14 @@ function notFound(): void{
     exit;
 };
 
+function badRequest($message='Bad Request'):void
+{
+    http_response_code(400);
+    echo $message;
+    exit;
+}
+
+
 function getFilePath(string $uri, string $method):string{
     return ROUTES_DIR . '/' . normalizeUri($uri) . '_' . strtolower($method) . '.php';
 }
