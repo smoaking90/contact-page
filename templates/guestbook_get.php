@@ -1,5 +1,6 @@
 <?php
 $messages = $data['messages'];
+// echo $undefinedVariable;
 ?>
 
 <section>
