@@ -101,5 +101,6 @@
   <nav>
     <a href="/">Home</a>
     <a href="/contact">Contact Form</a>
+    <a href="/guestbook">Guest Book</a>
   </nav>
   <main>

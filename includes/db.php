@@ -26,3 +26,9 @@ function insertMessage(PDO $pdo, string $name, string $email, string $message):b
     ]);
     return $stmt->rowCount() > 0;
 }
+
+function getMessages(PDO $pdo):array{
+    $sql = "SELECT * from messages ORDER BY created_at DESC";
+    $stmt = $pdo->query($sql);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
