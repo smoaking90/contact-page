@@ -31,6 +31,11 @@ function serverError($message='Server error'):void{
     exit;
 }
 
+function redirect(string $uri):void{
+    header("Location: $uri");
+    exit();         
+}
+
 
 function getFilePath(string $uri, string $method):string{
     return ROUTES_DIR . '/' . normalizeUri($uri) . '_' . strtolower($method) . '.php';
