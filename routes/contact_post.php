@@ -1,6 +1,11 @@
 <?php
 
-// CSRF Token
+// CSRF Token Protection
+
+if(!validateCsrfToken($_POST['csrf_token'] ?? null)){
+    addFlashMessage('error', 'Sorry, please send the form again.');
+    redirect('/contact');
+}
 
 // Get data data from superglobal $_POST
 $name = $_POST['name'] ?? '';
